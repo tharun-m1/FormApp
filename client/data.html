@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="./data.css" />
+  </head>
+  <body>
+    <div class="caption">Details</div>
+    <div class="container">
+      <div class="details"></div>
+    </div>
+
+    <script>
+      let data = JSON.parse(localStorage.getItem("data"));
+      let cont = document.querySelector(".details");
+      const { fname, lname, email, phone } = data;
+      let fullName = fname + " " + lname;
+      let name = document.createElement("div");
+      name.innerText = fullName.toUpperCase();
+      cont.appendChild(name);
+
+      let mail = document.createElement("div");
+      mail.innerText = email;
+      cont.appendChild(mail);
+
+      let pno = document.createElement("div");
+      pno.innerText = phone;
+      cont.appendChild(pno);
+
+      let elments = document.querySelectorAll(".details > div");
+      elments.forEach((el) => {
+        el.classList.add("feild");
+      });
+
+      localStorage.removeItem("data");
+    </script>
+  </body>
+</html>

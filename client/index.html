@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Form</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="form-container">
+      <form id="form1">
+        <div class="feild">
+          <label for="fname">First Name</label>
+          <input placeholder="First Name" type="text" required name="fname" />
+        </div>
+        <div class="feild">
+          <label for="lname">Last Name</label>
+          <input placeholder="Last Name" type="text" required name="lname" />
+        </div>
+        <div class="feild">
+          <label for="email">Email</label>
+          <input placeholder="Email" type="email" required name="email" />
+        </div>
+        <div class="feild">
+          <label for="phone">Phone</label>
+          <input
+            placeholder="Phone"
+            type="text"
+            required
+            name="phone"
+            minlength="10"
+            maxlength="10"
+          />
+        </div>
+        <div class="feild">
+          <button type="submit" class="submit">Submit</button>
+        </div>
+      </form>
+      <div id="loader" class="loader">
+        <div class="circle"></div>
+      </div>
+    </div>
+
+    <script src="./script.js"></script>
+  </body>
+</html>
